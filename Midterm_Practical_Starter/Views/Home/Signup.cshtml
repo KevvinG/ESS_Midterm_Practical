@@ -1,0 +1,30 @@
+﻿@model Midterm_Practical_Starter.Models.User;
+@{
+    Layout = "_Layout";
+}
+
+<div id="jumbo" class="jumbotron">
+    <h1 class="text-center">Signup Page</h1>
+    <p class="text-center">Please enter your credentials to create your account</p>
+</div>
+
+<div class="panel panel-success">
+    <div class="panel-body">
+        <form class="p-a-1" asp-action="Signup" method="post">
+            <div asp-validation-summary="All"></div>
+            <div class="form-group">
+                <label asp-for="Email">Your email:</label>
+                <input type="email" class="form-control" asp-for="Email" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Password">Your password:</label>
+                <input type="password" class="form-control" asp-for="Password" />
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary" type="submit">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
